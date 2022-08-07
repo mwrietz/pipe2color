@@ -18,7 +18,7 @@ fn main() {
             Ok(len) => if len == 0 {
                 return;
             } else {
-                print!("{}", input.color(color_arg));
+                print!("{}", input.color(color_arg).bold());
             } 
             Err(error) => {
                 eprintln!("error: {}", error);
