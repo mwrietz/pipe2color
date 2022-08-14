@@ -37,9 +37,6 @@ fn main() {
 }
 
 fn usage() {
-    //let prog_path = env::current_dir().unwrap();
-    //println!("\n{} v{}", prog_path.file_name().unwrap().to_str().unwrap(), env!("CARGO_PKG_VERSION"));
     println!("\n{} v{}", tui_gen::get_prog_name(), env!("CARGO_PKG_VERSION"));
-    //println!("Usage: <COMMAND> | {} <COLOR>\n", prog_path.file_name().unwrap().to_str().unwrap());
     println!("Usage: <COMMAND> | {} <COLOR>\n", tui_gen::get_prog_name());
 }
