@@ -1,10 +1,12 @@
-use colored::Colorize;
+//use colored::Colorize;
 use std::io;
 use std::env;
 use std::process;
 
 mod tui_gen;
 mod gh_repo_status;
+
+use crate::tui_gen::print_color_bold;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -25,7 +27,8 @@ fn main() {
                     .expect("check_version error");
                 return;
             } else {
-                print!("{}", input.color(color_arg).bold());
+                //print!("{}", input.color(color_arg).bold());
+                print_color_bold(&input, color_arg);
             } 
             Err(error) => {
                 eprintln!("error: {}", error);
